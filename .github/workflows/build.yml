@@ -26,12 +26,12 @@ jobs:
     - name: Package .archiplugin
       run: |
         mkdir -p target/package
-        cp com.archimatetool.merge/target/com.archimatetool.merge-5.8.0-SNAPSHOT.jar target/package/
+        cp com.archimatetool.merge/target/com.archimatetool.merge-1.0.0-SNAPSHOT.jar target/package/
         touch target/package/archi-plugin
-        cd target/package && zip -r ../../duplicate-merge-plugin.archiplugin *
+        cd target/package && zip -r ../../duplicate-merge-plugin-v1.0.0-alpha.archiplugin *
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: duplicate-merge-plugin.archiplugin
-        path: duplicate-merge-plugin.archiplugin
+        name: duplicate-merge-plugin-v1.0.0-alpha.archiplugin
+        path: duplicate-merge-plugin-v1.0.0-alpha.archiplugin

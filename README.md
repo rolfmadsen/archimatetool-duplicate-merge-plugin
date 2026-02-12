@@ -1,6 +1,7 @@
 # Archi Duplicate Merge Plugin
 
 ![Build Status](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/actions/workflows/build.yml/badge.svg)
+![Latest Release](https://img.shields.io/github/v/release/rolfmadsen/archimatetool-duplicate-merge-plugin?label=download%20latest%20release)
 
 > [!WARNING]
 > **Disclaimer: Vibe-Coded Software**
@@ -19,11 +20,15 @@ A plugin for [Archi](https://www.archimatetool.com) that allows you to safely me
 
 ## Installation
 
-1. Download the latest `.archiplugin` file from the [Releases](../../releases) page.
-2. Open Archi.
-3. Go to **Help > Manage Archi Plug-ins...**
-4. Click **Install New...** and select the downloaded file.
-5. Restart Archi as prompted.
+1. Go to the **[Releases](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/releases)** page on GitHub.
+2. Download the latest `.archiplugin` file from the assets.
+3. Open Archi.
+4. Go to **Help > Manage Archi Plug-ins...**
+5. Click **Install New...** and select the downloaded file.
+6. Restart Archi as prompted.
+
+> [!TIP]
+> You can also find the latest development build by clicking the **Actions** tab on GitHub, selecting the latest run, and scrolling to the bottom to find the **Artifacts** section!
 
 ## Development
 
@@ -37,12 +42,13 @@ A plugin for [Archi](https://www.archimatetool.com) that allows you to safely me
 To build the plugin and create the `.archiplugin` package:
 
 ```bash
-# Build the JAR
+# Build the entire reactor (includes all dependencies)
 mvn clean install -Dmaven.test.skip=true
 
-# Create the package
+# The .archiplugin package is created in the root target/package directory during CI
+# To create it locally, you can follow the same steps as in .github/workflows/build.yml
 mkdir -p target/package
-cp target/com.archimatetool.merge-0.1.0-SNAPSHOT.jar target/package/
+cp com.archimatetool.merge/target/com.archimatetool.merge-5.8.0-SNAPSHOT.jar target/package/
 touch target/package/archi-plugin
 cd target/package && zip -r ../../duplicate-merge-plugin.archiplugin *
 ```

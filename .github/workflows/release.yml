@@ -27,14 +27,14 @@ jobs:
     - name: Package .archiplugin
       run: |
         mkdir -p target/package
-        cp com.archimatetool.merge/target/com.archimatetool.merge-5.8.0-SNAPSHOT.jar target/package/
+        cp com.archimatetool.merge/target/com.archimatetool.merge-1.0.0-SNAPSHOT.jar target/package/
         touch target/package/archi-plugin
-        cd target/package && zip -r ../../duplicate-merge-plugin.archiplugin *
+        cd target/package && zip -r ../../duplicate-merge-plugin-v1.0.0-alpha.archiplugin *
 
     - name: Create Release
       uses: softprops/action-gh-release@v2
       with:
-        files: duplicate-merge-plugin.archiplugin
+        files: duplicate-merge-plugin-v1.0.0-alpha.archiplugin
         generate_release_notes: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
