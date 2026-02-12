@@ -34,7 +34,6 @@ jobs:
     - name: Create Release
       uses: softprops/action-gh-release@v2
       with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         files: duplicate-merge-plugin-v1.0.0-alpha.archiplugin
         generate_release_notes: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
