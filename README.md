@@ -48,7 +48,7 @@ mvn clean install -Dmaven.test.skip=true
 # The .archiplugin package is created in the root target/package directory during CI
 # To create it locally, you can follow the same steps as in .github/workflows/build.yml
 mkdir -p target/package
-cp com.archimatetool.merge/target/com.archimatetool.merge-5.8.0-SNAPSHOT.jar target/package/
+cp com.archimatetool.merge/target/com.archimatetool.merge-1.0.0-SNAPSHOT.jar target/package/
 touch target/package/archi-plugin
 cd target/package && zip -r ../../duplicate-merge-plugin.archiplugin *
 ```
@@ -72,4 +72,4 @@ Contributions are welcome! Please feel free to submit a Pull Request or open an 
 
 ## License
 
-This project is licensed under the GNU General Public License v3 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
