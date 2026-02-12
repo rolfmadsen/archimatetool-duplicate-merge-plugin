@@ -18,14 +18,16 @@ A plugin for [Archi](https://www.archimatetool.com) that allows you to safely me
 - **Diagram Consolidation**: Detects if duplicate elements appear on the same diagram, migrates connections to the target box, and removes the redundant box.
 - **Safe Connection Handling**: Uses proper bi-directional updates to prevent model corruption and "hanging" connections.
 
-## Installation
+## 📥 Download & Installation
 
-1. Go to the **[Releases](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/releases/latest)** page on GitHub.
-2. Download the latest `.archiplugin` file from the assets.
-3. Open Archi.
-4. Go to **Help > Manage Archi Plug-ins...**
-5. Click **Install New...** and select the downloaded file.
-6. Restart Archi as prompted.
+**1. Download the Plugin:**
+[**Download version 1.0.0-alpha**](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/releases/download/v1.0.0-alpha/duplicate-merge-plugin-v1.0.0-alpha.archiplugin)
+
+**2. Install in Archi:**
+* Open Archi.
+* Go to **Help -> Manage Plug-ins...**
+* Click **Install...** and select the **.archiplugin** file you just downloaded.
+* Restart Archi as prompted.
 
 > [!TIP]
 > You can also find the latest development build by clicking the **Actions** tab on GitHub, selecting the latest run, and scrolling to the bottom to find the **Artifacts** section!
