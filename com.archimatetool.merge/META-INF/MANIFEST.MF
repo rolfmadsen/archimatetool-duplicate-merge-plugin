@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Duplicate Merge Plugin
+Bundle-SymbolicName: com.archimatetool.merge;singleton:=true
+Bundle-Version: 5.8.0.qualifier
+Bundle-Vendor: Archi Contrib
+Bundle-Description: Plugin to merge duplicate ArchiMate elements.
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.gef,
+ com.archimatetool.model,
+ com.archimatetool.editor
+Automatic-Module-Name: com.archimatetool.merge

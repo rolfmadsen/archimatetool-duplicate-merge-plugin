@@ -1,4 +1,0 @@
-#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Thu Feb 12 14:25:20 CET 2026
-org.osgi.resource-1.0.0.jar>central=
-org.osgi.resource-1.0.0.pom>central=

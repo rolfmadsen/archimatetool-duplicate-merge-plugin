@@ -4,15 +4,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.archimatetool</groupId>
-    <artifactId>com.archimatetool.merge</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
-    <packaging>eclipse-plugin</packaging>
+    <artifactId>archi-parent</artifactId>
+    <version>5.8.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-    <name>Archi Duplicate Merge Plugin</name>
+    <name>Archi Plugin Reactor</name>
 
     <properties>
-        <tycho-version>4.0.9</tycho-version>
+        <tycho-version>5.0.2</tycho-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>21</maven.compiler.release>
     </properties>
 
     <repositories>
@@ -21,12 +22,21 @@
             <layout>p2</layout>
             <url>https://download.eclipse.org/releases/2024-06</url>
         </repository>
-        <repository>
-            <id>Archi</id>
-            <layout>p2</layout>
-            <url>https://www.archimatetool.com/p2/core/</url>
-        </repository>
     </repositories>
+
+    <modules>
+        <module>com.archimatetool.jdom</module>
+        <module>com.archimatetool.model</module>
+        <module>com.archimatetool.widgets</module>
+        <module>org.eclipse.draw2d</module>
+        <module>org.eclipse.gef</module>
+        <module>org.eclipse.zest.core</module>
+        <module>org.eclipse.zest.layouts</module>
+        <module>com.archimatetool.templates</module>
+        <module>com.archimatetool.canvas</module>
+        <module>com.archimatetool.editor</module>
+        <module>com.archimatetool.merge</module>
+    </modules>
 
     <build>
         <plugins>
@@ -62,6 +72,7 @@
                 <artifactId>target-platform-configuration</artifactId>
                 <version>${tycho-version}</version>
                 <configuration>
+                    <executionEnvironment>JavaSE-21</executionEnvironment>
                     <environments>
                         <environment>
                             <os>win32</os>
