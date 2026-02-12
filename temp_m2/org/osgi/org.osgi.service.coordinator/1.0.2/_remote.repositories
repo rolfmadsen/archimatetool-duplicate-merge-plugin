@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Feb 12 14:23:54 CET 2026
+org.osgi.service.coordinator-1.0.2.jar>central=
+org.osgi.service.coordinator-1.0.2.pom>central=
