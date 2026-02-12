@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="com.archimatetool.editor.category"
+            description="Merge two selected ArchiMate elements"
+            id="com.archimatetool.merge.MergeCommand"
+            name="Merge Elements">
+      </command>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="com.archimatetool.merge.MergeHandler"
+            commandId="com.archimatetool.merge.MergeCommand">
+         <enabledWhen>
+            <with
+                  variable="selection">
+               <iterate
+                     ifEmpty="false"
+                     operator="and">
+                  <instanceof
+                        value="com.archimatetool.model.IArchimateElement">
+                  </instanceof>
+               </iterate>
+               <not>
+                  <count value="0"/>
+               </not>
+               <not>
+                  <count value="1"/>
+               </not>
+            </with>
+         </enabledWhen>
+      </handler>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+          <command
+               commandId="com.archimatetool.merge.MergeCommand"
+               icon="platform:/plugin/com.archimatetool.editor/img/app-16.png"
+               label="Merge Duplicate Elements..."
+               style="push">
+              <visibleWhen>
+                 <with
+                       variable="selection">
+                    <iterate
+                          ifEmpty="false"
+                          operator="and">
+                       <instanceof
+                             value="com.archimatetool.model.IArchimateElement">
+                       </instanceof>
+                    </iterate>
+                    <not>
+                       <count value="0"/>
+                    </not>
+                    <not>
+                       <count value="1"/>
+                    </not>
+                 </with>
+              </visibleWhen>
+          </command>
+      </menuContribution>
+   </extension>
+
+</plugin>
