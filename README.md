@@ -1,7 +1,7 @@
 # Archi Duplicate Merge Plugin
 
 ![Build Status](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/actions/workflows/build.yml/badge.svg)
-![Latest Release](https://img.shields.io/github/v/release/rolfmadsen/archimatetool-duplicate-merge-plugin?label=download%20latest%20release)
+[![Latest Release](https://img.shields.io/github/v/release/rolfmadsen/archimatetool-duplicate-merge-plugin?label=download%20latest%20release)](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/releases/latest)
 
 > [!WARNING]
 > **Disclaimer: Vibe-Coded Software**
@@ -20,7 +20,7 @@ A plugin for [Archi](https://www.archimatetool.com) that allows you to safely me
 
 ## Installation
 
-1. Go to the **[Releases](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/releases)** page on GitHub.
+1. Go to the **[Releases](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/releases/latest)** page on GitHub.
 2. Download the latest `.archiplugin` file from the assets.
 3. Open Archi.
 4. Go to **Help > Manage Archi Plug-ins...**
