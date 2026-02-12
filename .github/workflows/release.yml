@@ -27,7 +27,7 @@ jobs:
     - name: Package .archiplugin
       run: |
         mkdir -p target/package
-        cp target/com.archimatetool.merge-0.1.0-SNAPSHOT.jar target/package/
+        cp com.archimatetool.merge/target/com.archimatetool.merge-5.8.0-SNAPSHOT.jar target/package/
         touch target/package/archi-plugin
         cd target/package && zip -r ../../duplicate-merge-plugin.archiplugin *
 

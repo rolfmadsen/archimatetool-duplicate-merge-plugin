@@ -22,3 +22,16 @@ jobs:
         
     - name: Build with Maven
       run: mvn -B clean install -Dmaven.test.skip=true
+
+    - name: Package .archiplugin
+      run: |
+        mkdir -p target/package
+        cp com.archimatetool.merge/target/com.archimatetool.merge-5.8.0-SNAPSHOT.jar target/package/
+        touch target/package/archi-plugin
+        cd target/package && zip -r ../../duplicate-merge-plugin.archiplugin *
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: duplicate-merge-plugin.archiplugin
+        path: duplicate-merge-plugin.archiplugin
