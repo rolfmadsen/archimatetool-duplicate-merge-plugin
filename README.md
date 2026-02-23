@@ -1,8 +1,8 @@
 # Archi Duplicate Merge Plugin
 
 [![Java CI with Maven](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/actions/workflows/build.yml/badge.svg)](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/actions/workflows/build.yml)
-[![Latest Release](https://img.shields.io/github/v/release/rolfmadsen/archimatetool-duplicate-merge-plugin?label=Latest%20release&include_prereleases)](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/releases/latest)
-[![Download Plugin v1.0.0-alpha](https://img.shields.io/badge/Download_Plugin-v1.0.0--alpha-blue)](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/releases/download/v1.0.0-alpha/duplicate-merge-plugin-v1.0.0-alpha.archiplugin)
+[![Latest Release](https://img.shields.io/github/v/release/rolfmadsen/archimatetool-duplicate-merge-plugin?label=Latest%20stable%20release&color=blue)](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/releases/latest)
+[![Latest Build](https://img.shields.io/badge/Latest_Build-bleeding_edge-orange)](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/actions/workflows/build.yml)
 
 > [!WARNING]
 > **Disclaimer: Vibe-Coded Software**
@@ -22,7 +22,10 @@ A plugin for [Archi](https://www.archimatetool.com) that allows you to safely me
 ## 📥 Download & Installation
 
 **1. Download the Plugin:**
-[**Download version 1.0.0-alpha**](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/releases/download/v1.0.0-alpha/duplicate-merge-plugin-v1.0.0-alpha.archiplugin)
+You have two options depending on your needs.
+
+*   **Stable Version (Recommended):** [**Download Official Release**](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/releases/latest/download/duplicate-merge-plugin.archiplugin)
+*   **Bleeding Edge (Latest Commit):** To get the absolute newest (but potentially unstable) features, click the **Latest Build** badge at the top of this page, select the most recent green checkmark, and download the `.archiplugin` from the **Artifacts** section at the bottom.
 
 **2. Install in Archi:**
 * Open Archi.
@@ -51,7 +54,7 @@ mvn clean install -Dmaven.test.skip=true
 # The .archiplugin package is created in the root target/package directory during CI
 # To create it locally, you can follow the same steps as in .github/workflows/build.yml
 mkdir -p target/package
-cp com.archimatetool.merge/target/com.archimatetool.merge-1.0.0-SNAPSHOT.jar target/package/
+cp com.archimatetool.merge/target/com.archimatetool.merge-*.jar target/package/
 touch target/package/archi-plugin
 cd target/package && zip -r ../../duplicate-merge-plugin.archiplugin *
 ```

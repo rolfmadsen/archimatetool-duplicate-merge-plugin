@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v*'
+      - '[0-9]*'
 
 jobs:
   build:
@@ -27,13 +28,14 @@ jobs:
     - name: Package .archiplugin
       run: |
         mkdir -p target/package
-        cp com.archimatetool.merge/target/com.archimatetool.merge-1.0.0-SNAPSHOT.jar target/package/
+        # Copy jar file disregarding version so tag mismatches don't break the build
+        cp com.archimatetool.merge/target/com.archimatetool.merge-*.jar target/package/
         touch target/package/archi-plugin
-        cd target/package && zip -r ../../duplicate-merge-plugin-v1.0.0-alpha.archiplugin *
+        cd target/package && zip -r ../../duplicate-merge-plugin.archiplugin *
 
     - name: Create Release
       uses: softprops/action-gh-release@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        files: duplicate-merge-plugin-v1.0.0-alpha.archiplugin
+        files: duplicate-merge-plugin.archiplugin
         generate_release_notes: true
