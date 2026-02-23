@@ -1,7 +1,7 @@
 # Archi Duplicate Merge Plugin
 
 [![Java CI with Maven](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/actions/workflows/build.yml/badge.svg)](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/actions/workflows/build.yml)
-[![Latest Release](https://img.shields.io/github/v/release/rolfmadsen/archimatetool-duplicate-merge-plugin?label=Latest%20stable%20release&color=blue)](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/releases/latest)
+[![Latest Release](https://img.shields.io/github/v/release/rolfmadsen/archimatetool-duplicate-merge-plugin?label=Latest%20stable%20release&color=blue&include_prereleases)](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/releases/latest/download/duplicate-merge-plugin.archiplugin)
 [![Latest Build](https://img.shields.io/badge/Latest_Build-bleeding_edge-orange)](https://github.com/rolfmadsen/archimatetool-duplicate-merge-plugin/actions/workflows/build.yml)
 
 > [!WARNING]
